@@ -1,9 +1,4 @@
 require "capybara-facebook-macros/version"
+require "capybara/dsl"
+require "capybara-facebook-macros/macros"
 
-module Capybara
-  module Facebook
-    module Macros
-      # Your code goes here...
-    end
-  end
-end
