@@ -1,6 +1,8 @@
-# Capybara::Facebook::Macros
+# Capybara Facebook Macros
 
-TODO: Write a gem description
+Adds a few convenient methods to capybaras DSL for interacting with Facebook. Using the credentials of a Facebook test user associated with your facebook app the gem provides methods for logging in, accepting read and write permissions, logging out and deauthing the app
+
+They have been used and tested against selenium and capybara webkit drivers running locally as well as capybara-webkit running against a Xvfb headless server on Jenkins.
 
 ## Installation
 
@@ -18,9 +20,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Within a capybara feature:
+    
+    # given a css selector that triggers the auth dialogue, login and accept
+    
+    complete_facebook_dialogues_on_click('#login', {:email => testuser@fb.com , :password => 1234})
+    
+    # logout og facebook
+    
+    logout
+    
+    # if interacting with the page asks for additional permision ie facebok photos when choosing a picture
+    # handle the additional flow. Works for both read and write.
+    
+    accept_additional_permissions
+    
+    # remove the app permission 
+    
+    deauth_app
+
+## TODO
+
+ - Tests
 
 ## Contributing
+
+Any problems log them on the issues tracker or submit a pull request and passing tests
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
