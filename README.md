@@ -27,8 +27,7 @@ Within a capybara feature:
     complete_facebook_dialogues_on_click('#login', {:email => testuser@fb.com , :password => 1234})
     
     # email/password can be a hash or any class that has the attributes email, password ie test_user 
-    # has test_user.email and test_user.password,
-    # 
+    # has test_user.email and test_user.password
     
     complete_facebook_dialogues_on_click('#login', test_user)
     
