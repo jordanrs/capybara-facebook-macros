@@ -22,9 +22,15 @@ Or install it yourself as:
 
 Within a capybara feature:
     
-    # given a css selector that triggers the auth dialogue, login and accept
+    # given a css selector that triggers the auth dialogue, login and accept. 
     
     complete_facebook_dialogues_on_click('#login', {:email => testuser@fb.com , :password => 1234})
+    
+    # email/password can be a hash or any class that has the attributes email, password ie test_user 
+    # has test_user.email and test_user.password,
+    # 
+    
+    complete_facebook_dialogues_on_click('#login', test_user)
     
     # logout og facebook
     
